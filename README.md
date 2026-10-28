@@ -1,1 +1,3 @@
-# Week-1-Cybersec-work
+🔐 Cybersecurity Lab Environment Setup
+Building an isolated virtual lab for penetration testing and ethical hacking practice
+
