@@ -44,3 +44,74 @@ It can be used for activities such as:
 ## 🏗️ Lab Architecture
 
 
+## ⚙️ Lab Configuration
+
+🧩 Component	⚙️ Configuration
+🖥️ Host OS 	Windows 11
+🧠 Host RAM	8 GB
+⚡ Processor	Intel Core i5
+🧰 Hypervisor	VirtualBox 7.2
+🐉 Security OS	Kali Linux 2026.2
+🧠 Kali RAM	2048 MB
+🌐 Virtual Network	NAT Network
+📡 Network Address	10.0.0.0/24
+🐧 Kali IP Address	10.0.0.2/24
+🚪 Default Gateway	10.0.0.1
+🌍 DNS Server	8.8.8.8
+🔮 Future VM Range	10.0.0.3–10.0.0.9
+
+## 🪜 Lab Setup Procedure
+Step 1. Install VirtualBox
+VirtualBox was installed as the hypervisor.
+
+Step 2. Create the NAT Network
+A dedicated NAT Network was created in VirtualBox.
+
+Configuration: Network Name: NatNetwork IPv4 Prefix: 10.0.0.0/24 DHCP: Enabled IPv6: Disabled
+
+
+
+A NAT Network was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
+
+This will allow future attacker and target VMs to communicate within the lab.
+
+Step 3. Import Kali Linux
+The Kali Linux virtual machine was downloaded from the official Kali Linux website and imported into VirtualBox.
+
+The VM network adapter was configured as follows:
+
+Adapter 1
+Attached to: NAT Network
+Network:     NatNetwork
+Adapter Type: Intel PRO/1000 MT Desktop
+The VM was allocated:
+
+RAM: 2048 MB
+ A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
+
+Step 4. Configure the Kali Linux Network
+The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
+
+Example configuration:
+
+IP Address: 10.0.0.2
+Subnet Mask: 255.255.255.0
+Gateway: 10.0.0.1
+DNS: 8.8.8.8
+A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
+
+
+
+Step 5. Create a Clean VM Snapshot
+After completing the initial configuration, a VirtualBox snapshot was created.
+
+Example snapshot name:
+
+Clean Kali - Network Setup
+The snapshot represents the clean baseline of the laboratory.
+
+If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
+
+
+
+
