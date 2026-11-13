@@ -41,14 +41,14 @@ It can be used for activities such as:
   
 ⚠️ Important: This laboratory must only be used for systems that you own or have explicit permission to test. Do not use the lab or its tools to attack unauthorized systems.
 
-## 🏗️ Lab Architecture
+
 
 
 ## ⚙️ Lab Configuration
 
-🧩 Component	⚙️ Configuration
-🖥️ Host OS 	Windows 11
-🧠 Host RAM	8 GB
+| 🧩 Component	⚙️ Configuration
+| 🖥️ Host OS 	Windows 11
+| 🧠 Host RAM	8 GB
 ⚡ Processor	Intel Core i5
 🧰 Hypervisor	VirtualBox 7.2
 🐉 Security OS	Kali Linux 2026.2
